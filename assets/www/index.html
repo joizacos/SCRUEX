@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>UAirPoll</title>
+
+<link href="styles/notify-bar.css" type="text/css" rel="stylesheet"/>
+<link href="styles/main.css" type="text/css" rel="stylesheet"/>
+<link href="styles/Menu.css" type="text/css" rel="stylesheet"/>
+<link href="styles/Notifier.css" type="text/css" rel="stylesheet"/>
+<link href="styles/Session.css" type="text/css" rel="stylesheet"/>
+
+<script type="text/javascript" charset="utf-8" src="libs/cordova-1.8.1.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/CommunicationPlugin.js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+
+<script type="text/javascript" charset="utf-8" src="libs/UAP.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/Splash.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/Cartographer.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/Menu.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/Notifier.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/Session.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/Settings.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/Warehouse.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/Captor.js"></script>
+<script type="text/javascript" charset="utf-8" src="libs/Synchronizer.js"></script>
+<script type="text/javascript" charset="utf-8">
+	
+	function onLoad(){
+		document.addEventListener("deviceready",onDeviceReady,false);
+	}
+	
+	
+	function onDeviceReady(){
+		UAP.init();
+		UAP.registerModule("Settings",Settings);
+		UAP.registerModule("Splash",Splash);
+		UAP.registerModule("Cartographer",Cartographer);
+		UAP.registerModule("Menu",Menu);
+		UAP.registerModule("Notifier",Notifier);
+		UAP.registerModule("Session",Session);
+		UAP.registerModule("Warehouse",Warehouse);
+		UAP.registerModule("Captor",Captor);
+		UAP.registerModule("Synchronizer",Synchronizer);
+		
+		UAP.startModule("Settings");
+		UAP.startModule("Splash");
+		UAP.startModule("Cartographer");
+		UAP.startModule("Menu");
+		UAP.startModule("Notifier");
+		UAP.startModule("Session");
+		UAP.startModule("Warehouse");
+		UAP.startModule("Captor");
+		UAP.startModule("Synchronizer");
+		
+		setTimeout('Sandbox.publish("Notifications",["mode","On"])',3000); 
+	}
+	
+	
+</script>
+
+<style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0px; padding: 0px }
+  #content {height:100%; margin: 0px; padding: 0px}
+  #map { height: 100% }
+  #splash {position:absolute; height:100%; width:100%; margin:0px; padding:0px; top:0px; left:0px; background-color:white;
+  			z-index:100;
+  }
+</style>
+
+</head>
+<body onload="onLoad();">
+	<div id="splash">
+		<img src= "images/logo.png" width="300" height="150">
+		<h2>Bienvenidos a SmartClassRoom</h2>
+		<h3>Loading...</h3>
+		<h4>Authors: Iván Bravo Gijón & Jorge Oíz Acosta</h4>
+	</div>
+	<div id="notifybar">
+		<div id="username" class="notify"> Not logged</div>
+		<div id="gps" class="notify">Off</div>
+		<div id="mode" class="notify">Offline</div>
+		<div id="flyport" class="notify">Offline</div>
+		<div id="server" class="notify">-</div>
+	</div>
+	<div id="content">
+		<div id="map"></div>
+		<div id="sync"></div>
+		<div id="capt"></div>
+		<div id="sync&capt"></div>
+	</div>
+	<div id="menu" style='visibility:hidden'>
+		<a class="menuitem" id="menu.information"  href="informacion.html">Information</a>
+		<a class="menuitem" id="menu.login"  href="accesoUsuario.html" >Init Session</a>
+		<a class="menuitem" id="menu.contact"  href="contactoWeb.html">Contact</a>
+		<a class="menuitem" id="menu.exit" onClick='navigator.app.exitApp();'>Salir</a>
+	</div>
+
+	<div id="settings" style='visibility:hidden'>
+		
+	</div>
+	
+</body>
+</html>

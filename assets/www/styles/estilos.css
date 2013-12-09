@@ -1,0 +1,73 @@
+/* CSS Document */
+
+/* la peculiaridad de las páginas */
+#paginasCentrales{
+background-color:#66FFFF; /* fondo azul claro */
+text-align:center;  /* alineación texto al medio */
+color:#FFFFFF;  /* color blanco de la letra */
+font-family: Times New Roman, Arial, Arial Black, sans-serif; /* los tipos de letra por orden */
+font-size:20px;
+}
+
+#paginasFormularios{
+background-color:#00CCFF; /* fondo azul claro */
+text-align:left;  /* alineación texto al medio */
+color:#FFFFFF;  /* color blanco de la letra */
+font-family: Times New Roman, Arial, Arial Black, sans-serif; /* los tipos de letra por orden */
+font-size:20px;
+}
+
+/* Titulo informacion */
+#tituloInfor{
+font-weight: bold;
+font-size:20px;
+text-decoration:underline;
+}
+
+/*--- Definir el fondo de la pantalla ---*/
+#fondoAzulClaro {background-color:#66FFFF}
+
+/*--- Definir el fondo celdas de las tablas ---*/
+#fondoAzulOscuro {background-color:#000080}
+
+/*--- Alineaciones de párrafos o de opciones en el índice ---*/
+#alineacionTextoCentro {text-align:center}
+#alineacionTextoIzq {text-align:left}
+#alineacionTextoDer {text-align:right}
+
+/*--- Color de letra de lás paginas web ---*/
+#colorBlancoLetra {color:#FFFFFF}
+
+/*--- Tipo de letra del titulo de la págins web ---*/
+#letraTitulo {
+font-family: Arial Black, Arial, sans-serif;
+color:#FFFFFF;
+text-align:center;
+font-weight:bold;
+font-size:22px;
+}
+
+/*--- Tipo de letra de la parte inferior de la página web ---*/
+#letraInferior {
+font-family: Times New Roman, Arial Black, Arial, sans-serif;
+color:#FFFFFF;
+text-align:center;
+font-weight:bold;
+font-size:22px;
+}
+
+/* Cada opción del índice de la página web */
+#menu{
+background-color:#000080; /*fondo azul oscuro*/
+color:#FFFFFF; /* color letra blanco*/
+font-family: Times New Roman, Arial Black, Arial, sans-serif;
+text-align:left;
+font-weight:bold;
+font-size:16px;
+}
+
+#opcionFormulario{
+font-family: Arial Black;
+font-weight:bold;
+font-size:15px;
+}

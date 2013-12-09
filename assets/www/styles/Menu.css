@@ -1,0 +1,20 @@
+
+#menu{
+	position:absolute;
+	bottom: 0px;
+	right:0px;
+	}
+
+.menuitem {
+	display:block;
+	background-color:black;
+	width: 8em;
+	padding:5px;
+	color:white;
+	border-bottom-color: gray;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-radius:3px;
+	z-index:10000;
+}
+

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Flyport online webserver</title>
+<link href="style/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="jquery.mobile-1.2.0.min.css" />
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.mobile-1.2.0.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/cordova-2.1.0.js"></script>
+<script type="text/javascript" src="scripts/mchp.js"></script>
+<script type="text/javascript" src="js/datos.js"></script>
+</head>
+<body>
+<div id="content">
+	<div id="logo"><img src="images/logo.jpg" alt="Picus"/> </div>
+	<!--
+	<table id="menu" border="0">
+		<tr>
+			<th class="active"></th>
+			<th class="active"><span class="key">H</span>ome</th>
+			<th class="active"></th>
+		</tr>
+	</table>
+	-->
+	<div id="intro_right">
+	<p class="white">Wireless Webserver</p>
+	<h1>Project SmartClassRoom</h1>
+	<p>With this project we can access through a web server to the measurement of the temperature and the choice of the light on or off via an OpenPicus. </p>
+	<p>May 2013</p>
+	</div>
+	<div id="status">
+		<div id="loading" style="display:none">Error:<br />Connection to Flyport control board was lost.</div>
+		<div id="display">
+			<span style="float:right;font-size:9px;font-weight:normal;padding-top:8px;text-indent:0px">(click on led botton)</span>
+			<p>Luz:<br /><span class="leds">
+			<div align="center"><input style="text-align:center" type="button" value="ON Light" onclick= "EncenderLuz()">
+			</div>
+			<div align="center"><input style="text-align:center" type="button" value="OFF Light" onclick= "ApagarLuz()">
+			</div></br>
+			
+			<div style=" width:204px; height:13px; background-color:#92b7d3;">
+				<div id ="bar1" style="width:90px; height:13px; background-color:#12365e; border-right:1px white solid;"></div>
+			</div></p>
+			<span style="float:right;font-size:9px;font-weight:normal;padding-top:8px;text-indent:0px">(click on botton)</span>
+			<p>Temperature is: <span id="temp" style="font-weight:normal">?</span>
+			<div align="center"><input style="text-align:center" type="button" value="Check temperature" onclick= "loadTemperatura()">
+			</div>
+			
+			<div align="center"><input style="text-align:center" type="button" value="Save" onclick= "saveDatos()">
+			</div>
+			
+		</div>
+	</div>
+	</div>
+	<div align="center" class="special">
+		<a title="Validate">Authors: Ivan Bravo Gijon (@ibravogi) and Jorge Oiz Acosta (@joizacos) </a>
+		</br>
+		<input style="text-align:center" type="button" value="Exit Session" onclick= "volverInicio()">
+	</div>
+	
+</body>
+</html>

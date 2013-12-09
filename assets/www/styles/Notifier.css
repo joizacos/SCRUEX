@@ -1,0 +1,20 @@
+
+#notifybar {
+		height: 2.5em;
+		background: rgba(0, 0, 0, 0.6);
+		right: 0px;
+		top: -1px;
+		position:absolute;
+		z-index:99;
+}
+.notify{
+	display:inline;
+	float:left;
+	opacity:1.0;
+	z-index:10000000000;
+	color:white;
+	margin-left:6px;
+	margin-right:6px;
+	
+	border: 1px;
+}

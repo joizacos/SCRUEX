@@ -1,0 +1,22 @@
+#session{
+	position:fixed;
+	top:0px;
+	left:0px;
+	margin: 15px;
+	margin-top:4em;
+	opacity: 0.75;
+	background-color: black;
+	color: white;
+	border-radius: 15px;
+	z-index:98;
+}
+
+.sessionElement{
+	margin: 1em;
+	text-align: center;
+}
+
+.sessionElement input{
+	border: 1px solid white;	
+	
+}
